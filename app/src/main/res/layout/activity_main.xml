@@ -6,45 +6,25 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/edit_text_key"
-        android:layout_width="121dp"
-        android:layout_height="43dp"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="264dp"
-        android:text="company"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/edit_text_value"
-        android:layout_width="87dp"
-        android:layout_height="36dp"
-        android:layout_marginTop="272dp"
-        android:layout_marginEnd="68dp"
-        android:text="US$"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <Button
         android:id="@+id/button_insert"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="80dp"
-        android:layout_marginTop="80dp"
         android:text="INSERT"
+        app:layout_constraintBottom_toTopOf="@+id/text_view"
+        app:layout_constraintEnd_toStartOf="@+id/button_read"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_text_key" />
+        app:layout_constraintTop_toBottomOf="@+id/edit_text_value" />
 
     <Button
         android:id="@+id/button_read"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="68dp"
-        android:layout_marginEnd="68dp"
         android:text="READ"
+        app:layout_constraintBottom_toBottomOf="@+id/button_insert"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edit_text_value" />
+        app:layout_constraintStart_toEndOf="@+id/button_insert"
+        app:layout_constraintTop_toTopOf="@+id/button_insert" />
 
     <TextView
         android:id="@+id/text_view"
@@ -55,4 +35,32 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/edit_text_key"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="key"
+        android:inputType="textMultiLine"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/edit_text_value"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edit_text_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:gravity="start|top"
+        android:hint="value"
+        android:inputType="textMultiLine"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/text_view"
+        app:layout_constraintEnd_toEndOf="@+id/edit_text_key"
+        app:layout_constraintStart_toStartOf="@+id/edit_text_key"
+        app:layout_constraintTop_toBottomOf="@+id/edit_text_key" />
 </androidx.constraintlayout.widget.ConstraintLayout>
